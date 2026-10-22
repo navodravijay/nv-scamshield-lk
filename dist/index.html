@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="NV. ScamShield LK — a free, privacy-first, trilingual scam-awareness checker for Sri Lanka. No uploads, no accounts, no tracking.">
+  <meta name="color-scheme" content="dark">
+  <title>NV. ScamShield LK | Think Before You Click</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script type="module" src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#checker" data-i18n="skip">Skip to checker</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="NV. ScamShield LK homepage">
+        <span class="brand-mark">NV<span class="brand-dot">.</span></span>
+        <span class="brand-copy"><strong>SCAMSHIELD <em>LK</em></strong><small data-i18n="brandSub">by NV SHARP SOLUTIONS</small></span>
+      </a>
+      <div class="nav-actions">
+        <a class="header-link" href="#how" data-i18n="navHow">How it works</a>
+        <a class="header-link nav-report" href="#help" data-i18n="navHelp">Get help ↗</a>
+        <div class="language-wrap"><label class="visually-hidden" for="language" data-i18n="languageLabel">Language</label>
+          <select id="language" aria-label="Language"><option value="en">English</option><option value="si">සිංහල</option><option value="ta">தமிழ்</option></select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span><span data-i18n="eyebrow">BUILT FOR A SAFER DIGITAL SRI LANKA</span></div>
+        <h1 id="hero-title"><span data-i18n="heroLine1">DON'T LET A</span><br><span class="gradient-text" data-i18n="heroLine2">SCAM WIN.</span></h1>
+        <p class="hero-description" data-i18n="heroDesc">Not sure about a message or link? Check for common scam warning signs — privately, right here in your browser.</p>
+        <div class="hero-points">
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="point1">No account needed</span></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="point2">No data uploads</span></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="point3">3 languages</span></span>
+        </div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><div class="shield-glow"></div><div class="shield-shape"><div class="shield-core"><span>NV<span class="brand-dot">.</span></span><small>PROTECT • EDUCATE</small></div></div><span class="orbit-label label-top">01 / PRIVACY</span><span class="orbit-label label-bottom">02 / AWARENESS</span></div>
+    </section>
+
+    <section class="checker-section container" id="checker" aria-labelledby="checker-title">
+      <div class="checker-main">
+        <div class="card-header"><div><div class="section-kicker" data-i18n="toolLabel">THE CHECKER</div><h2 id="checker-title" data-i18n="toolHeading">Spot the warning signs.</h2><p data-i18n="toolIntro">Paste a suspicious message or URL. We'll explain what deserves a closer look.</p></div><span class="local-badge"><span aria-hidden="true">◉</span> <span data-i18n="localBadge">ON-DEVICE ANALYSIS</span></span></div>
+        <div class="mode-tabs" role="group" aria-label="Content type"><button id="mode-message" class="mode-button active" type="button" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12H8l-4 3z"/><path d="M8 9h8M8 13h5"/></svg><span data-i18n="tabMessage">Message check</span></button><button id="mode-url" class="mode-button" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l2-2A5 5 0 0 0 12 3l-1.1 1.1M14 11a5 5 0 0 0-7.07 0l-2 2A5 5 0 0 0 12 21l1.1-1.1"/></svg><span data-i18n="tabUrl">URL check</span></button></div>
+        <label for="content-input" class="field-label" data-i18n="inputLabelMessage">MESSAGE TO CHECK</label>
+        <div class="input-shell"><textarea id="content-input" maxlength="5000" spellcheck="false" rows="6" placeholder="Paste a suspicious message here…" aria-describedby="privacy-hint"></textarea><div class="input-footer"><span id="char-count">0 / 5000</span><button id="clear-button" type="button" class="subtle-button" data-i18n="clear">Clear</button></div></div>
+        <p class="privacy-hint" id="privacy-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="privacyHint">Never paste passwords, OTPs, bank details, NIC numbers or private personal information.</span></p>
+        <div class="checker-actions"><button class="primary-button" id="scan-button" type="button"><span data-i18n="scan">Analyze warning signs</span><span aria-hidden="true">↗</span></button><button class="sample-button" id="sample-button" type="button"><span data-i18n="sample">Try a demo example</span><span aria-hidden="true">↘</span></button></div>
+        <div id="results" class="results" hidden aria-live="polite" aria-atomic="true"><div class="result-top"><div class="result-visual" aria-hidden="true">!</div><div><div class="result-kicker" data-i18n="resultKicker">LOCAL ANALYSIS COMPLETE</div><h3 id="result-title"></h3></div></div><p id="result-description"></p><h4 data-i18n="findingsTitle">What we noticed</h4><ul id="findings-list" class="findings-list"></ul><div class="result-advice"><strong data-i18n="adviceTitle">Your next step</strong><p id="advice-text"></p></div><p class="result-caveat" data-i18n="caveat">This is an educational warning-sign check, not proof that a message is fraudulent or a URL is safe. We do not open links or check live reputation databases.</p></div>
+        <p class="tool-footnote"><span class="footnote-dot"></span><span data-i18n="offlineNote">Checks run in your browser only. Content isn't uploaded or saved by this app.</span></p>
+      </div>
+      <aside class="safety-aside" aria-labelledby="side-title"><div class="aside-kicker" data-i18n="sideKicker">THE GOLDEN RULE</div><h3 id="side-title" data-i18n="sideTitle">Stop. Check. Verify.</h3><p data-i18n="sideDesc">A convincing message can still be a scam. Take a moment before you act.</p><div class="step"><span class="step-num">01</span><div><strong data-i18n="step1Title">Pause before clicking</strong><p data-i18n="step1Desc">Don't tap unexpected links or install unfamiliar apps.</p></div></div><div class="step"><span class="step-num">02</span><div><strong data-i18n="step2Title">Protect your details</strong><p data-i18n="step2Desc">Never share OTPs, passwords or financial details through a message.</p></div></div><div class="step"><span class="step-num">03</span><div><strong data-i18n="step3Title">Verify independently</strong><p data-i18n="step3Desc">Contact the organization using a website or phone number you find yourself.</p></div></div><div class="aside-bottom"><span class="aside-icon">✳</span><span data-i18n="asideBottom">A little skepticism can save a lot of trouble.</span></div></aside>
+    </section>
+
+    <section class="how-section container" id="how"><div class="section-top"><div><div class="section-kicker" data-i18n="howKicker">HOW IT WORKS</div><h2 data-i18n="howTitle">Built to inform.<br>Not to spy.</h2></div><p data-i18n="howDesc">Transparent rules, understandable results, and no hidden uploads. Your privacy shouldn't be the price of staying safe.</p></div><div class="feature-grid"><article class="feature-card"><span class="feature-icon">⌁</span><h3 data-i18n="feat1Title">Pattern awareness</h3><p data-i18n="feat1Desc">Looks for pressure tactics, requests for secrets and suspicious link patterns.</p></article><article class="feature-card"><span class="feature-icon">◎</span><h3 data-i18n="feat2Title">Private by design</h3><p data-i18n="feat2Desc">Runs without an account, analytics, a remote scanner or saving your text.</p></article><article class="feature-card"><span class="feature-icon">✦</span><h3 data-i18n="feat3Title">Clear next steps</h3><p data-i18n="feat3Desc">Shows why content needs attention and how to verify claims safely.</p></article></div></section>
+
+    <section class="help-section container" id="help"><div class="help-copy"><div class="section-kicker" data-i18n="helpKicker">NEED REAL HELP?</div><h2 data-i18n="helpTitle">You don't have to guess alone.</h2><p data-i18n="helpDesc">If you've shared information, lost money, or suspect an account compromise, contact the relevant bank or service provider immediately and use official reporting channels.</p></div><div class="help-links"><a class="help-link" href="https://cert.gov.lk/report_incident" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"><span><strong data-i18n="certTitle">Sri Lanka CERT</strong><small data-i18n="certDesc">Official incident reporting portal</small></span><span aria-hidden="true">↗</span></a><a class="help-link" href="https://www.police.lk/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"><span><strong data-i18n="policeTitle">Sri Lanka Police</strong><small data-i18n="policeDesc">Official police website</small></span><span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer container"><div><span class="footer-brand">NV<span>.</span></span><span data-i18n="footerBuilt">A community-focused project by NV SHARP SOLUTIONS.</span></div><span data-i18n="footerNote">Independent educational tool • Not affiliated with Sri Lanka CERT or Police</span></footer>
+</body>
+</html>

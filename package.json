@@ -1,0 +1,8 @@
+{
+  "name": "nv-scamshield-lk",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {"test": "node --test tests/*.test.js"},
+  "description": "Privacy-first trilingual scam-awareness web app for Sri Lanka."
+}
